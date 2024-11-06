@@ -16,4 +16,4 @@ done
 files="${*:idx}"
 
 # shellcheck disable=SC2086
-java -jar linter/$cksty.jar -c linter/google_checks.xml $files
+java -jar linter/$cksty.jar -c linter/sun_checks.xml $files
