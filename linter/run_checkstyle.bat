@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 set cksty=checkstyle-10.20.0
-set jar_path=linter\%cksty%-all.jar
+set jar_path=linter\%cksty%.jar
 
 REM Check if the Checkstyle JAR file already exists and download it if not
 if exist %jar_path% (
