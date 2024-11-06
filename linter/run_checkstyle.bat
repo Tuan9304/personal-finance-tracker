@@ -3,8 +3,13 @@ setlocal enabledelayedexpansion
 
 set cwd="linter/"
 
+set cksty="checkstyle-10.20.0"
+
+REM TODO: make it compatible with Windows
+REM wget -qNO %cwd%/%cksty%.jar https://github.com/checkstyle/checkstyle/releases/download/%cksty%/%cksty%-all.jar
+
 set output=""
-for /f "delims=" %%i in ('java -jar %cwd%/checkstyle-10.20.0-all.jar -c %cwd%/google_checks.xml src/') do (
+for /f "delims=" %%i in ('java -jar %cwd%/%cksty%.jar -c %cwd%/google_checks.xml src/') do (
     echo %%i
     set output=!output! %%i
 )

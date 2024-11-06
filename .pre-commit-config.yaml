@@ -4,6 +4,6 @@ repos:
       hooks:
           - id: checkstyle
             name: Checkstyle
-            entry: linter/run_checkstyle.bat
+            entry: linter/run_checkstyle.py
             language: script
             files: \.java$

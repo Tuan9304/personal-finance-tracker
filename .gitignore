@@ -18,3 +18,9 @@ buildNumber.properties
 
 # VSCode
 .vscode/
+
+# Checkstyle
+checkstyle*.jar
+
+# Python venv
+.venv/
