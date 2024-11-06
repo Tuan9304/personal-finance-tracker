@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 
 /** JavaFX App. */
 public class App extends Application {
-
     /** start the app. */
     @Override
     public void start(final Stage stage) {
@@ -33,5 +32,4 @@ public class App extends Application {
     public static void main(final String[] args) {
        launch();
     }
-
 }

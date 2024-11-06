@@ -1,24 +1,39 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set cwd="linter/"
+set cksty=checkstyle-10.20.0
+set jar_path=linter\%cksty%-all.jar
 
-set cksty="checkstyle-10.20.0"
-
-REM TODO: make it compatible with Windows
-REM wget -qNO %cwd%/%cksty%.jar https://github.com/checkstyle/checkstyle/releases/download/%cksty%/%cksty%-all.jar
-
-set output=""
-for /f "delims=" %%i in ('java -jar %cwd%/%cksty%.jar -c %cwd%/sun_checks.xml src/') do (
-    echo %%i
-    set output=!output! %%i
-)
-
-echo !output! | findstr /C:"[WARN]" >nul
-if %ERRORLEVEL% == 0 (
-    exit /b 1
+REM Check if the Checkstyle JAR file already exists and download it if not
+if exist %jar_path% (
+    echo Checkstyle JAR file already exists, skipping download.
 ) else (
-    exit /b 0
+    echo Downloading Checkstyle JAR file...
+    powershell -Command "Invoke-WebRequest -Uri https://github.com/checkstyle/checkstyle/releases/download/%cksty%/%cksty%-all.jar -OutFile %jar_path%"
 )
 
-endlocal
+REM Find the index of the first parameter with a Java file path
+set idx=1
+set files=
+
+:find_java_file
+if "%~1"=="" goto :run_checkstyle
+if "%~x1"==".java" (
+    set idx=%1
+    goto :set_files
+)
+shift
+goto :find_java_file
+
+:set_files
+set files=%*
+goto :run_checkstyle
+
+:run_checkstyle
+REM Run Checkstyle on the specified files
+java -jar %jar_path% -c linter\sun_checks.xml %files%
+
+REM Capture the exit code from the java command
+set exit_code=%ERRORLEVEL%
+
+endlocal & exit /b %exit_code%
