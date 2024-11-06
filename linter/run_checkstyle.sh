@@ -2,7 +2,9 @@
 
 cksty="checkstyle-10.20.0"
 
-wget -qNO linter/$cksty.jar https://github.com/checkstyle/checkstyle/releases/download/$cksty/$cksty-all.jar
+if [ ! -f "linter/$cksty.jar" ]; then
+    wget -qO linter/$cksty.jar https://github.com/checkstyle/checkstyle/releases/download/$cksty/$cksty-all.jar
+fi
 
 # find the index of the first parameter with a Java file path
 idx=1
