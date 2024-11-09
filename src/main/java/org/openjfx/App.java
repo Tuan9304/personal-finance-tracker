@@ -1,5 +1,6 @@
 package org.openjfx;
 
+import atlantafx.base.theme.PrimerLight;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -11,6 +12,11 @@ public class App extends Application {
     /** start the app. */
     @Override
     public void start(final Stage stage) {
+        Application.setUserAgentStylesheet(new PrimerLight()
+            .getUserAgentStylesheet());
+        // Application.setUserAgentStylesheet(new PrimerDark()
+        // .getUserAgentStylesheet());
+
         final var javaVersion = SystemInfo.javaVersion();
         final var javafxVersion = SystemInfo.javafxVersion();
         final int w = 640;
