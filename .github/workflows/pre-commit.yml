@@ -7,7 +7,8 @@ on:
     branches:
       - main
 jobs:
-  main:
+  linux:
+    name: pre-commit-linux
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
