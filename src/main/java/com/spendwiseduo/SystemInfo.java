@@ -1,4 +1,4 @@
-package org.openjfx;
+package com.spendwiseduo;
 
 /** System information. */
 public final class SystemInfo {

@@ -1,4 +1,4 @@
-package org.openjfx;
+package com.spendwiseduo;
 
 import atlantafx.base.theme.PrimerLight;
 import javafx.application.Application;
@@ -8,7 +8,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /** JavaFX App. */
-public class App extends Application {
+public class MainApp extends Application {
     /** start the app. */
     @Override
     public void start(final Stage stage) {
