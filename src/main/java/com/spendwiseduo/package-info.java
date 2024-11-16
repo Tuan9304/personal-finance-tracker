@@ -1,6 +1,6 @@
 /**
  * Provides classes for [insert brief description].
  */
-package org.openjfx;
+package com.spendwiseduo;
 
 // Additional package-level annotations (optional)

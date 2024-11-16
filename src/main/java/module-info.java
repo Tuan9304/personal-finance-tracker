@@ -1,7 +1,7 @@
-module org.openjfx {
+module com.spendwiseduo {
   requires atlantafx.base;
   requires transitive javafx.graphics;
   requires javafx.controls;
 
-  exports org.openjfx;
+  exports com.spendwiseduo;
 }
