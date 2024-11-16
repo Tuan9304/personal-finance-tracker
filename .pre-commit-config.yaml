@@ -13,5 +13,3 @@ repos:
         entry: linter/run_checkstyle.py
         language: python
         files: \.java$
-ci:
-    autoupdate_schedule: monthly
