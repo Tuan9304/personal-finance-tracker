@@ -49,6 +49,7 @@ You can check the formatting using Maven:
 ```sh
 mvn spotless:check
 ```
+
 and apply changes using:
 
 ```sh

@@ -110,12 +110,6 @@
                         </includes>
                         <biome></biome>
                     </css>
-                    <markdown>
-                        <includes>
-                            <include>**/*.md</include>
-                        </includes>
-                        <flexmark></flexmark>
-                    </markdown>
                 </configuration>
                 <executions>
                     <execution>
