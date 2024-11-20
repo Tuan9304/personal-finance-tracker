@@ -12,13 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - uses: actions/setup-python@v4
+    - name: Check format
+      run: mvn spotless:check
+    - uses: actions/setup-python@v5
       with:
         python-version: 3.x
     - name: Make run_checkstyle.py executable

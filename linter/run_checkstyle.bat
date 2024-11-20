@@ -31,7 +31,7 @@ goto :run_checkstyle
 
 :run_checkstyle
 REM Run Checkstyle on the specified files
-java -jar %jar_path% -c linter\sun_checks.xml %files%
+java -jar %jar_path% -c linter\aosp_checks.xml %files%
 
 REM Capture the exit code from the java command
 set exit_code=%ERRORLEVEL%
