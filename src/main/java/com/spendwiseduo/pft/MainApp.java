@@ -1,19 +1,21 @@
-package com.spendwiseduo;
+package com.spendwiseduo.pft;
 
 import atlantafx.base.theme.PrimerLight;
 import com.spendwiseduo.pft.view.MainLayout;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import com.spendwiseduo.pft.util.DatabaseUtil;
+import java.sql.Connection;
 
 /** JavaFX App. */
 public class MainApp extends Application {
     /** Start the app. */
     @Override
     public void start(final Stage stage) {
+        Connection connection = DatabaseUtil.connect();
+
         Application.setUserAgentStylesheet(new PrimerLight().getUserAgentStylesheet());
-        // Application.setUserAgentStylesheet(new PrimerDark()
-        // .getUserAgentStylesheet());
 
         final int w = 1280;
         final int h = 720;

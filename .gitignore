@@ -26,3 +26,5 @@ checkstyle*.jar
 
 # Python venv
 .venv
+
+*.db
