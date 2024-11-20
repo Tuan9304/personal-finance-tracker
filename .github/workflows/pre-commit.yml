@@ -18,7 +18,9 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - uses: actions/setup-python@v4
+    - name: Check format
+      run: mvn spotless:check
+    - uses: actions/setup-python@v5
       with:
         python-version: 3.x
     - name: Make run_checkstyle.py executable

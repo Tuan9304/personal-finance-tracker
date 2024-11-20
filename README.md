@@ -24,7 +24,7 @@ JavaFX is required for the UI components of this project. The necessary dependen
 
 ## Checkstyle Setup
 
-Checkstyle is used to ensure that the code adheres to the coding standards. The configuration file is located at [linter/sun_checks.xml](linter/sun_checks.xml).
+Checkstyle is used to ensure that the code adheres to the coding standards. The configuration file is located at [linter/aosp_checks.xml](linter/aosp_checks.xml).
 
 ### Running Checkstyle
 
@@ -33,7 +33,7 @@ You can download the Checkstyle JAR file from the [official website](https://che
 Checkstyle can be run using the command:
 
 ```sh
-java -jar linter/checkstyle-10.20.0.jar -c linter/sun_checks.xml src/main/java
+java -jar linter/checkstyle-10.20.0.jar -c linter/aosp_checks.xml src/main/java
 ```
 
 Checkstyle is also automatically run when you commit code using the pre-commit hooks.
@@ -42,12 +42,17 @@ Checkstyle is also automatically run when you commit code using the pre-commit h
 
 Google Java Formatter is used to format the code according to Google's Java style guide.
 
-### Install Google Java Formatter
+### Usage
 
-You can install the formatter using Maven:
+You can check the formatting using Maven:
 
 ```sh
-mvn com.coveo:fmt-maven-plugin:format
+mvn spotless:check
+```
+and apply changes using:
+
+```sh
+mvn spotless:apply
 ```
 
 ## Pre-commit Hooks
