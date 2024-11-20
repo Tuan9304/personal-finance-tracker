@@ -12,8 +12,7 @@ public class MainApp extends Application {
     /** start the app. */
     @Override
     public void start(final Stage stage) {
-        Application.setUserAgentStylesheet(new PrimerLight()
-            .getUserAgentStylesheet());
+        Application.setUserAgentStylesheet(new PrimerLight().getUserAgentStylesheet());
         // Application.setUserAgentStylesheet(new PrimerDark()
         // .getUserAgentStylesheet());
 
@@ -21,10 +20,13 @@ public class MainApp extends Application {
         final var javafxVersion = SystemInfo.javafxVersion();
         final int w = 640;
         final int h = 480;
-        var label = new Label(
-            "Hello, JavaFX " + javafxVersion
-            + ", running on Java " + javaVersion + "."
-        );
+        var label =
+                new Label(
+                        "Hello, JavaFX "
+                                + javafxVersion
+                                + ", running on Java "
+                                + javaVersion
+                                + ".");
         var scene = new Scene(new StackPane(label), w, h);
         stage.setScene(scene);
         stage.show();
@@ -36,6 +38,6 @@ public class MainApp extends Application {
      * @param args command-line arguments
      */
     public static void main(final String[] args) {
-       launch();
+        launch();
     }
 }

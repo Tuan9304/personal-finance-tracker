@@ -6,10 +6,10 @@ A desktop application for personal finance tracking. The app will allow users to
 
 Make sure you have the following installed on your machine:
 
--   Java Development Kit (JDK) 17
--   Apache Maven
--   Python 3
--   Git
+- Java Development Kit (JDK) 17
+- Apache Maven
+- Python 3
+- Git
 
 ## Clone the Repository
 
@@ -67,9 +67,9 @@ pre-commit install
 
 ## Additional Resources
 
--   [JavaFX Documentation](https://openjfx.io/)
--   [Checkstyle Documentation](https://checkstyle.org/)
--   [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
--   [Pre-commit Documentation](https://pre-commit.com/)
+- [JavaFX Documentation](https://openjfx.io/)
+- [Checkstyle Documentation](https://checkstyle.org/)
+- [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+- [Pre-commit Documentation](https://pre-commit.com/)
 
 Happy coding!
