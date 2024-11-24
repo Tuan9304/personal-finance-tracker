@@ -9,6 +9,9 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    ignore:
+    - dependency-name: "org.openjfx:javafx-controls"
+      update-types: ["version-update:semver-major"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
