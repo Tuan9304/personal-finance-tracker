@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.spendwiseduo</groupId>
     <artifactId>personal-finance-tracker</artifactId>
     <version>0.1-SNAPSHOT</version>
+
+    <url>https://github.com/Tuan9304/personal-finance-tracker</url>
+    <scm>
+        <url>https://github.com/Tuan9304/personal-finance-tracker</url>
+    </scm>
+    <issueManagement>
+        <url>https://github.com/Tuan9304/personal-finance-tracker/issues</url>
+    </issueManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
