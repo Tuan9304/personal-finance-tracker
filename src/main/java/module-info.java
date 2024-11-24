@@ -1,10 +1,10 @@
 module com.spendwiseduo.pft {
-  requires atlantafx.base;
-  requires transitive javafx.graphics;
-  requires javafx.controls;
-  requires javafx.base;
+    requires atlantafx.base;
+    requires transitive javafx.graphics;
+    requires javafx.controls;
+    requires javafx.base;
 
-  exports com.spendwiseduo.pft;
+    exports com.spendwiseduo.pft;
 
-  requires java.sql;
+    requires java.sql;
 }
