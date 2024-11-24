@@ -1,0 +1,24 @@
+.nav-bar {
+    -fx-background-color: #45576b;
+    -fx-padding: 10 0 10 0;
+    -fx-spacing: 10;
+    -fx-min-width: 160;
+
+    background-color: #45576b;
+    padding: 10px 0 10px 0;
+    min-width: 160px;
+}
+
+.nav-bar .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+
+    background-color: transparent;
+}
+
+.nav-bar .button-active {
+    -fx-background-color: #304759;
+    -fx-text-fill: white;
+
+    background-color: #304759;
+}

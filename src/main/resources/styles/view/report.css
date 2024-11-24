@@ -1,0 +1,20 @@
+.report {
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-min-width: 1120;
+
+    background-color: #f4f4f4;
+    padding: 10px;
+    min-width: 1120px;
+}
+
+.report .header {
+    -fx-border-color: transparent transparent gray transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-style: none none solid none;
+
+    border-color: transparent transparent gray transparent;
+    border-width: 0 0 1px 0;
+    border-style: none none solid none;
+}
