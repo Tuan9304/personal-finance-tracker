@@ -1,7 +1,10 @@
-package com.spendwiseduo;
+package com.spendwiseduo.pft;
 
 import atlantafx.base.theme.PrimerLight;
+import com.spendwiseduo.pft.util.UserDatabaseUtil;
 import com.spendwiseduo.pft.view.MainLayout;
+import java.sql.Connection;
+import java.sql.SQLException;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -11,9 +14,15 @@ public class MainApp extends Application {
     /** Start the app. */
     @Override
     public void start(final Stage stage) {
+        String userId = "testId";
+        String password = "testPw";
+        try {
+            Connection connection = UserDatabaseUtil.connect(userId, password);
+        } catch (SQLException e) {
+            // handle it.
+        }
+
         Application.setUserAgentStylesheet(new PrimerLight().getUserAgentStylesheet());
-        // Application.setUserAgentStylesheet(new PrimerDark()
-        // .getUserAgentStylesheet());
 
         final int w = 1280;
         final int h = 720;
