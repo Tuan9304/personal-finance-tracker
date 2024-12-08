@@ -4,6 +4,7 @@ import javafx.scene.Parent;
 
 /** Utility class for loading stylesheets. */
 public final class Stylesheet {
+    /** stylesheet's directory. */
     public static final String STYLESHEET_FOLDER = "/styles/";
 
     /**
